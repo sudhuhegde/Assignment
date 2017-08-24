@@ -7,6 +7,8 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import com.sudarshan.driver.DriverUtility;
+
 public class LoginPage extends BasePage {
 	private WebDriver driver;
 	
@@ -34,6 +36,7 @@ public class LoginPage extends BasePage {
 
 	public void login(String userName, String pass){
 		System.out.println("Logging in");
+		DriverUtility.sleep(3);
 		username.sendKeys(userName);
 		password.sendKeys(pass);
 		login.submit();	

@@ -14,7 +14,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.gargoylesoftware.htmlunit.ElementNotFoundException;
-import com.sudarshan.testcases.SuiteSetup;
+import com.sudarshan.driver.DriverUtility;
 
 public class UserBlogPage extends BasePage {
 	private WebDriver driver;
@@ -71,7 +71,7 @@ public class UserBlogPage extends BasePage {
 		newButton.click();
 		WebDriverWait wait  = new WebDriverWait(driver, maxWait);
 		wait.until(ExpectedConditions.elementToBeClickable(newTitle));
-		SuiteSetup.sleep(2);
+		DriverUtility.sleep(2);
 
 		setTextUsingActions(title, newTitle);
 		addContentToPost(content, false);
@@ -107,10 +107,10 @@ public class UserBlogPage extends BasePage {
 
 	public void logOut(){
 		System.out.println("Logging out");
-		SuiteSetup.sleep(5);
+		DriverUtility.sleep(5);
 		Mouse mouse =((HasInputDevices)driver).getMouse();
 		mouse.mouseMove(((Locatable)displaName).getCoordinates());
-		SuiteSetup.sleep(3);
+		DriverUtility.sleep(3);
 		logout.click();
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.visibilityOf(backToLog));

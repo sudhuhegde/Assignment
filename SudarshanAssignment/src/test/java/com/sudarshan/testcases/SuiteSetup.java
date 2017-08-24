@@ -53,13 +53,7 @@ public abstract class SuiteSetup {
 		driver.get(TEST_URL);
 	}
 
-	public static void sleep(int seconds){
-		try {
-			Thread.sleep(seconds*1000);
-		} catch (Exception e) {
-			// TODO: handle exception later
-		}
-	}
+
 	
 	public static int getRandom(){
 		Random rand = new Random();

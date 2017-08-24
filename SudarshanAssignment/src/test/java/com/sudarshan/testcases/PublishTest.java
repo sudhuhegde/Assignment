@@ -2,6 +2,8 @@ package com.sudarshan.testcases;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
+
+import com.sudarshan.driver.DriverUtility;
 /**
  * 
  * @author sudharshan
@@ -19,7 +21,7 @@ public class PublishTest extends SuiteSetup {
 		if(! userBlogPage.isLoggedIn()){
 			homePage.openLoginPage();
 			loginPage.waitTillLoginPageOpens(60);
-			sleep(3);
+			DriverUtility.sleep(3);
 			loginPage.login(USER_NAME, PASSWORD);
 			userBlogPage.waitUntilPageLogIn(60);
 		}
@@ -47,7 +49,7 @@ public class PublishTest extends SuiteSetup {
 		String boldContent = "";
 		//Login and create post
 		if(! userBlogPage.isLoggedIn()){
-			sleep(2);
+			DriverUtility.sleep(2);
 			homePage.openLoginPage();
 			loginPage.waitTillLoginPageOpens(60);
 			loginPage.login(USER_NAME, PASSWORD);
