@@ -1,13 +1,13 @@
 ## Assignment
 This project uses Selenium and TestNG and Java.
 
-##Pre-Requisite
+## Pre-Requisite
 1. Java 7/ Java 8 is installed and PATH is set
 2. Gradle is installed and Path is Set
 3. Google Chrome is Installed.
 4. Runs only on MAC and WINDOWS
 
-##Running the Tests
+## Running the Tests
 1. Goto SudarshanAssignment Folder and Run following command
 
 "Gradle test"
