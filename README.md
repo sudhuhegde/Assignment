@@ -22,7 +22,7 @@ This project has structure of Selenium Page Factory.  Page elements are added in
 
 Test Cases are devided into Trivial , Publish and Comment Groups.  Any new test case in this category should be added in respective class using helper functions created Page Factory classes.
 
-##Improvements
+## Improvements
  
  1. Logging , Reporting
  2. Setting up Grid
